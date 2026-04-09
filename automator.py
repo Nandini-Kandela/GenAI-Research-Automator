@@ -4,12 +4,12 @@ from google import genai
 import os
 
 # 1. Setup the NEW AI Client (Paste your API key here)
-client = genai.Client(api_key="AIzaSyB_rSHo6E4AN9MkPifhVLAp79wCjUAZruo")
+client = genai.Client(api_key="YOUR_API_KEY_HERE")
 
 # 2. Extract Text from PDF
 def extract_text_from_pdf(pdf_path):
     if not os.path.exists(pdf_path):
-        print(f"❌ ERROR: I cannot find '{pdf_path}'. Check the file name!")
+        print(f" ERROR: I cannot find '{pdf_path}'. Check the file name!")
         return None
         
     text = ""
@@ -53,4 +53,4 @@ if paper_text:
         print(summary)
         print("\n===============================================")
     except Exception as e:
-        print(f"\n❌ AI Error: {e}")
+        print(f"\n AI Error: {e}")
